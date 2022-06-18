@@ -34,6 +34,10 @@ export default {
   ],
   i18n: vueI18n,
 
+  axios: {
+    baseURL: process.env.API_BASE_URL,
+  },
+
   // vite: {
   //   build: true,
   // },
@@ -48,7 +52,7 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/axios'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
