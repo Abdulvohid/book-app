@@ -41,6 +41,7 @@ export default {
         @invalid="handleInvalid"
         v-model="name"
       />
+
       <button type="submit" class="form__button">Submit</button>
     </form>
   </div>
