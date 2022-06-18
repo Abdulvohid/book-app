@@ -1,12 +1,18 @@
 <template>
-  <div><hello-component /></div>
+  <div>
+    <login-component />
+  </div>
 </template>
 
 <script>
-import HelloComponent from '../components/HelloComponent.vue'
+import LoginComponent from '../my-components/auth/LoginComponent.vue'
+
 export default {
-  components: { HelloComponent },
+  name: 'index-component',
+  components: { LoginComponent },
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+@import url(../static/main.scss);
+</style>
