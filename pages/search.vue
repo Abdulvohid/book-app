@@ -1,13 +1,11 @@
-<template>
-  <div>
-    <h2>Hello</h2>
-  </div>
-</template>
-
 <script>
 export default {
-  name: 'search',
+  name: 'search-components',
 }
 </script>
 
-<style lang="scss" scoped></style>
+<template>
+  <div>
+    <h2>Информация не найдена</h2>
+  </div>
+</template>

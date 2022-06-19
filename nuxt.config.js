@@ -2,6 +2,7 @@ import { vueI18n } from './locales/i18n-config'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+
   head: {
     title: 'book-app',
     htmlAttrs: {
