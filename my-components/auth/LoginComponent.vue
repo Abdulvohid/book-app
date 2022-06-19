@@ -1,25 +1,37 @@
 <script>
+import Loading from '../../library/Loading.vue'
 export default {
   name: 'LoginComponent',
+
+  components: { Loading },
 
   data() {
     return {
       error: '',
       name: '',
+      loading: false,
     }
   },
 
   methods: {
     login(e) {
       e.preventDefault()
-
       if (this.name) {
-        this.$router.push({ path: '/MainComponent' })
-        console.log(this.name)
+        setTimeout(() => {
+          this.$router.push({ path: '/MainComponent' })
+        }, 3000)
       }
     },
+
     handleInvalid(e) {
       this.error = e.target.validationMessage
+    },
+
+    saveSassion() {
+      this.loading = !false
+      setTimeout(() => {
+        this.loading = !true
+      }, 3000)
     },
   },
 }
@@ -42,7 +54,17 @@ export default {
         v-model="name"
       />
 
-      <button type="submit" class="form__button">Submit</button>
+      <button @click="saveSassion" type="submit" class="form__button">
+        <div class="button__hero">
+          <div v-if="loading">
+            <Loading />
+          </div>
+          <span v-if="loading">Saving</span>
+          <span v-else>Saved</span>
+        </div>
+      </button>
+
+      ]
     </form>
   </div>
 </template>
@@ -117,5 +139,11 @@ export default {
   color: #fff;
   margin: 0 auto;
   cursor: pointer;
+}
+
+.button__hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

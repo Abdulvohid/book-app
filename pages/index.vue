@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <header>
     <login-component />
-  </div>
+  </header>
 </template>
 
 <script>
